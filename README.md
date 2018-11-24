@@ -32,6 +32,10 @@ To run the project locally follow the following steps:
 Flask for the backend API (default port `5000`)
 For more information see the README.md file in the backend directory
 
+## Credits
+
+Followed the tutorial [Deploying Machine Learning Models with Docker](https://towardsdatascience.com/deploying-machine-learning-models-with-docker-5d22a4dacb5) to help create this template
+
 ## License
 
 This project is licensed under the MIT License

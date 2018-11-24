@@ -2,7 +2,6 @@ from flask import Flask, request, jsonify
 
 # declare constants
 HOST = '0.0.0.0'
-PORT = 5000
 
 # initialize flask application
 app = Flask(__name__)
@@ -21,5 +20,4 @@ def test():
 
 
 if __name__ == '__main__':
-    app.run(host=HOST,
-            port=PORT)
+    app.run(host=HOST)

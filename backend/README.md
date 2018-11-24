@@ -18,15 +18,16 @@ You will need the following things properly installed on your computer:
 
 ## Installation
 
-* run `git clone https://github.com/caseyr003/flask-react-template.git`
+* run `git clone https://github.com/caseyr003/flask-production-template.git`
 
 ## Running
 
 To run the project locally follow the following steps:
 
 * change into the project directory
-* `docker build -t backend-api .`
-* `docker run -p 5000:5000 -v /HOST/PATH/TO/BACKEND/FOLDER:/app backend-api`
+* uncomment last line in `Dockerfile`
+* `docker build -t api .`
+* `docker run -p 5000:5000 api`
 
 ## JSON API
 

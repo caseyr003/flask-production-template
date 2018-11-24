@@ -13,4 +13,5 @@ WORKDIR /app
 RUN pip install -r requirements.txt
 
 # This is the runtime command for the container
-CMD python app.py
+# Add below line if not using docker-compose
+# CMD gunicorn -w 1 -b :5000 app:app

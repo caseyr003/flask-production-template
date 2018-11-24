@@ -3,13 +3,26 @@ version: "3"
 services:
 
   # Create container for backend api
-  backend:
-    image: backend-api
+  api:
+    image: api
     container_name: app-api
     restart: always
     build:
       context: ./backend
       dockerfile: Dockerfile
     ports:
-      - "8000:8000"
-    command: gunicorn -w 1 -b :8000 app:app
+      - "5000:5000"
+    command: gunicorn -w 1 -b :5000 app:app
+
+  # Create container for nginx server
+  server:
+    image: nginx-server
+    container_name: app-server
+    restart: always
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    depends_on:
+      - api
